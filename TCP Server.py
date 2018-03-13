@@ -1,6 +1,6 @@
 import socket
 
-TCP_IP = '127.0.0.1'
+TCP_IP = '118.138.101.97'
 TCP_PORT = 50000
 BUFFER_SIZE = 1024*4
 
@@ -31,7 +31,7 @@ def main():
     full_line = []
 
     def break_line():
-        global line_segments, temp_line
+        global line_segments, pressed
         while True:
             while pressed is True:
                 if len(line_segments) > 2:
@@ -67,7 +67,7 @@ def main():
         pressed = True
 
     def stop_drawing(a):
-        global pressed, line_segments, full_line, temp_line
+        global pressed, line_segments, full_line
         pressed = False
         w.create_line(full_line, smooth=1)
         w.delete('temp')
