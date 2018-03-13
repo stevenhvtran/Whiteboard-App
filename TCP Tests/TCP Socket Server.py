@@ -1,6 +1,5 @@
 import socket
-
-
+import time
 TCP_IP = '127.0.0.1'
 TCP_PORT = 49152
 BUFFER_SIZE = 20
@@ -17,4 +16,7 @@ while True:
         break
     print('The chunk of data received was: ' + str(data))
     conn_obj.send(data.encode())
+
+time.sleep(5)
+conn_obj(send(b'hi'))
 conn_obj.close()

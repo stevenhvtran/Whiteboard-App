@@ -1,5 +1,4 @@
 import socket
-import time
 
 TCP_IP = '127.0.0.1'
 TCP_PORT = 49152
@@ -21,5 +20,6 @@ while True:
         messageList.append(buf.decode())
 
 print(''.join(messageList))
+s.recv(BUFFER_SIZE)
 s.close()
 
