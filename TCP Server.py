@@ -1,6 +1,6 @@
 import socket
 
-TCP_IP = '118.138.101.97'
+TCP_IP = '114.77.79.221'
 TCP_PORT = 50000
 BUFFER_SIZE = 1024*4
 
@@ -19,6 +19,7 @@ while True:  # Doesn't break out of this loop unless the client sends a handshak
             break
         else:
             conn.send(b'Please send the correct handshake message')
+
 
 def main():
     import tkinter as tk
